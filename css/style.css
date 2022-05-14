@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    height:95vh;
+    min-block-size:100%;
+    min-inline-size: 100%;
+    margin:0;
+    box-sizing: border-box;
+    display:grid;
+    place-content: center;
+}
+.container{
+    width:100%;
+}
+h1::before{
+    transform:scaleX(0);
+    transform-origin:bottom right;
+}
+h1:hover::before{
+    transform:scaleX(1);
+    transform-origin:bottom left;
+}
+h1::before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    inset:0 0 0 0;
+    background: rgb(236,18,83);
+    z-index:-1;
+    transition:transform .5s ease;
+}
+h1,h2{
+    position:relative;
+    font-size:5rem;
+    cursor:pointer;
+    text-align: center;
+}
+h2::before{
+    transform:scaleX(0);
+    transform-origin:bottom right;
+}
+h2:hover::before{
+    transform:scaleX(1);
+    transform-origin:bottom left;
+}
+h2::before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    inset:0 0 0 0;
+    background: rgb(61,232,22);
+    z-index:-1;
+    transition:transform .5s ease;
+}
+h1:hover,h2:hover{
+    color:#fff;
+}
+@media (orientation: landscape){
+    body{
+        grid-auto-flow:column;
+    }
+}
